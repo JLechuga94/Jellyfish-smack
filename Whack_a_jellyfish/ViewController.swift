@@ -10,6 +10,7 @@ import UIKit
 import ARKit
 class ViewController: UIViewController {
 
+    @IBOutlet weak var play: UIButton!
     @IBOutlet weak var sceneView: ARSCNView!
     let configuration = ARWorldTrackingConfiguration()
     override func viewDidLoad() {
@@ -23,14 +24,18 @@ class ViewController: UIViewController {
 
     @IBAction func play(_ sender: Any) {
         self.addNode()
+        self.play.isEnabled = false
     }
     @IBAction func reset(_ sender: Any) {
     }
+    
     func addNode(){
-        let node = SCNNode(geometry: SCNBox(width: 0.2, height: 0.2, length: 0.2, chamferRadius: 0))
-        node.position = SCNVector3(0,0,-1)
-        self.sceneView.scene.rootNode.addChildNode(node)
+        let jellyFishScene = SCNScene(named: "art.scnassets/Jellyfish.scn")
+        let jellyFishNode = jellyFishScene?.rootNode.childNode(withName: "Jellyfish", recursively: false)
+        jellyFishNode?.position = SCNVector3(0,0,-1)
+        self.sceneView.scene.rootNode.addChildNode(jellyFishNode!)
     }
+    
     @objc func handleTap(sender: UITapGestureRecognizer){
         let sceneViewTappedOn = sender.view as! SCNView
         let touchCoordinates = sender.location(in:sceneViewTappedOn)
@@ -40,10 +45,22 @@ class ViewController: UIViewController {
         }
         else{
             let results = hitTest.first!
-            let geometry = results.node.geometry
-            print(geometry)
+            let node = results.node
+            if node.animationKeys.isEmpty{
+                self.animateNode(node: node)
+            }
         }
         
+    }
+    func animateNode(node: SCNNode){
+        let spin = CABasicAnimation(keyPath: "position")
+        let nodePosition = node.presentation.position
+        spin.fromValue = nodePosition
+        spin.toValue = SCNVector3(nodePosition.x - 0.2,nodePosition.y - 0.2,nodePosition.z - 0.2)
+        spin.duration = 0.1
+        spin.autoreverses = true
+        spin.repeatCount = 3
+        node.addAnimation(spin, forKey: "position")
     }
 }
 

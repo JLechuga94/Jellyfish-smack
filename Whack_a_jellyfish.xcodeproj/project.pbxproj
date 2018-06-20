@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D0013A620DA0338002BC6DC /* Textures in Resources */ = {isa = PBXBuildFile; fileRef = 7D0013A520DA0338002BC6DC /* Textures */; };
+		7D0013A920DA03C5002BC6DC /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D0013A820DA03C5002BC6DC /* art.scnassets */; };
 		7D3F44FC20D8F3A000EE9F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F44FB20D8F3A000EE9F3C /* AppDelegate.swift */; };
 		7D3F44FE20D8F3A000EE9F3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F44FD20D8F3A000EE9F3C /* ViewController.swift */; };
 		7D3F450120D8F3A000EE9F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3F44FF20D8F3A000EE9F3C /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D0013A520DA0338002BC6DC /* Textures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Textures; sourceTree = "<group>"; };
+		7D0013A820DA03C5002BC6DC /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		7D3F44F820D8F3A000EE9F3C /* Whack_a_jellyfish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whack_a_jellyfish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3F44FB20D8F3A000EE9F3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D3F44FD20D8F3A000EE9F3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,11 +105,13 @@
 			children = (
 				7D3F44FB20D8F3A000EE9F3C /* AppDelegate.swift */,
 				7D3F44FD20D8F3A000EE9F3C /* ViewController.swift */,
+				7D0013A520DA0338002BC6DC /* Textures */,
 				7D3F44FF20D8F3A000EE9F3C /* Main.storyboard */,
 				7D3F450520D8F3A100EE9F3C /* Assets.xcassets */,
 				7D3F450720D8F3A100EE9F3C /* LaunchScreen.storyboard */,
 				7D3F450A20D8F3A100EE9F3C /* Info.plist */,
 				7D3F450220D8F3A000EE9F3C /* Whack_a_jellyfish.xcdatamodeld */,
+				7D0013A820DA03C5002BC6DC /* art.scnassets */,
 			);
 			path = Whack_a_jellyfish;
 			sourceTree = "<group>";
@@ -234,6 +240,8 @@
 			files = (
 				7D3F450920D8F3A100EE9F3C /* LaunchScreen.storyboard in Resources */,
 				7D3F450620D8F3A100EE9F3C /* Assets.xcassets in Resources */,
+				7D0013A920DA03C5002BC6DC /* art.scnassets in Resources */,
+				7D0013A620DA0338002BC6DC /* Textures in Resources */,
 				7D3F450120D8F3A000EE9F3C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
