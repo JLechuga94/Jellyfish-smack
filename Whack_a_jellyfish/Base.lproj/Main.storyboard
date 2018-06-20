@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ye5-Ko-K3I">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mH-bv-ViH">
                                 <rect key="frame" x="20" y="547" width="100" height="100"/>
@@ -43,23 +43,44 @@
                                     <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9qh-hg-EQs"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hg9-Jz-jr6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9b-aP-Ccw">
+                                        <rect key="frame" x="160.5" y="14.5" width="54" height="21"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="o9b-aP-Ccw" firstAttribute="centerY" secondItem="hg9-Jz-jr6" secondAttribute="centerY" id="C5M-eh-CGv"/>
+                                    <constraint firstItem="o9b-aP-Ccw" firstAttribute="centerX" secondItem="hg9-Jz-jr6" secondAttribute="centerX" id="vS1-bZ-cmo"/>
+                                    <constraint firstAttribute="height" constant="50" id="z0v-y4-yKA"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ye5-Ko-K3I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6AL-F4-zfK"/>
+                            <constraint firstItem="hg9-Jz-jr6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="B3i-YT-O1y"/>
+                            <constraint firstItem="ye5-Ko-K3I" firstAttribute="top" secondItem="hg9-Jz-jr6" secondAttribute="bottom" id="EG0-5Q-ezZ"/>
                             <constraint firstItem="4mH-bv-ViH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GZR-D3-Q6K"/>
                             <constraint firstItem="ye5-Ko-K3I" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="OO6-j7-V9n"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ARH-eb-Go6" secondAttribute="bottom" constant="20" id="QE1-5f-COS"/>
                             <constraint firstItem="ye5-Ko-K3I" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Urh-uA-c8Q"/>
+                            <constraint firstItem="hg9-Jz-jr6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="clN-Ok-Gg8"/>
+                            <constraint firstItem="hg9-Jz-jr6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hG8-Lf-Ft9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4mH-bv-ViH" secondAttribute="bottom" constant="20" id="hJv-C1-vgi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ARH-eb-Go6" secondAttribute="trailing" constant="20" id="jWP-ll-N93"/>
-                            <constraint firstItem="ye5-Ko-K3I" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kzx-LO-MEn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="play" destination="4mH-bv-ViH" id="3O4-AS-is4"/>
                         <outlet property="sceneView" destination="ye5-Ko-K3I" id="6UW-YY-lSF"/>
+                        <outlet property="timerLabel" destination="o9b-aP-Ccw" id="7Lz-dR-6G1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
